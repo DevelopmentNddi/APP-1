@@ -8,8 +8,8 @@ namespace APP_1
 
         static void Main(string[] args)
         {
-            int a = 0;
-            int b = 0;
+            int a;
+            int b;
             int result = 0;
             char[] symbol = {'+','-','*','/'};
             char operation;
@@ -17,11 +17,11 @@ namespace APP_1
             {
                 string str = Console.ReadLine();
 
-                int numb = 0;
-                numb = str.IndexOfAny(symbol);
-                int.TryParse(str.Substring(0, numb), out a);
-                int.TryParse(str.Substring(numb + 1), out b);
-                char.TryParse(str.Substring(numb, 1), out operation);
+                int indexOfOperation;
+                indexOfOperation = str.IndexOfAny(symbol);
+                int.TryParse(str.Substring(0, indexOfOperation), out a);
+                int.TryParse(str.Substring(indexOfOperation + 1), out b);
+                char.TryParse(str.Substring(indexOfOperation, 1), out operation);
 
                 switch (operation)
                 {
