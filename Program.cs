@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace APP_1
 {
@@ -11,30 +8,45 @@ namespace APP_1
 
         static void Main(string[] args)
         {
-            int a;
-            int b;
+            int a = 0;
+            int b = 0;
             int result = 0;
             char[] symbol = {'+','-','*','/'};
             char operation;
-            string str = Console.ReadLine();
-
-            int numb;
-            numb = str.IndexOfAny(symbol);
-            int.TryParse(str.Substring(0, numb), out a);
-            int.TryParse(str.Substring(numb+1), out b);
-            char.TryParse(str.Substring(numb, 1), out operation);
-
-            switch (operation)
+            while (true)
             {
-                case '+': result = a + b; break;
-                case '-': result = a - b; break;
-                case '*': result = a * b; break;
-                case '/': result = a / b; break;
-            }
+                string str = Console.ReadLine();
 
-            string res = " " + a + operation + b + "=" + result;
-            Console.WriteLine(res);
-            Console.ReadKey( );
+                int numb = 0;
+                numb = str.IndexOfAny(symbol);
+                int.TryParse(str.Substring(0, numb), out a);
+                int.TryParse(str.Substring(numb + 1), out b);
+                char.TryParse(str.Substring(numb, 1), out operation);
+
+                switch (operation)
+                {
+                    case '+': result = a + b; break;
+                    case '-': result = a - b; break;
+                    case '*': result = a * b; break;
+                    case '/': result = a / b; break;
+                }
+                string res = " " + a + operation + b + "=" + result;
+                Console.WriteLine(res);
+                while (true)
+                {
+                    Console.WriteLine("Если вы хотите очистить консоль нажмите <Пробел> \n");// Если хотите закрыть приложение нажмите <CapsLock> \n Если хотите провести новое вычисление нажмите любую другую клавишу ");
+                    ConsoleKeyInfo KeyInfo = Console.ReadKey();
+                    if (KeyInfo.Key == ConsoleKey.Spacebar)
+                    {
+                        Console.Clear();
+                        break;
+                    }
+                    else
+                    {
+                        return;
+                    }
+                }
+            }
         }
     }
 }
