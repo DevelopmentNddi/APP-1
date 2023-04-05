@@ -15,6 +15,7 @@ namespace APP_1
             char operation;
             while (true)
             {
+                Console.WriteLine( "Введите ваш пример");
                 string str = Console.ReadLine();
 
                 int indexOfOperation;
@@ -33,12 +34,14 @@ namespace APP_1
                 string res = " " + a + operation + b + "=" + result;
                 Console.WriteLine(res);
 
-                    Console.WriteLine("Если вы хотите очистить консоль нажмите <Пробел> \n");// Если хотите закрыть приложение нажмите <CapsLock> \n Если хотите провести новое вычисление нажмите любую другую клавишу ");
+                    Console.WriteLine("Если вы хотите очистить консоль нажмите <Пробел> \nЕсли хотите закрыть приложение нажмите <Escape> \nЕсли хотите провести новое вычисление нажмите <Enter> ");
                     ConsoleKeyInfo KeyInfo = Console.ReadKey();
                     if (KeyInfo.Key == ConsoleKey.Spacebar)
                     {
                         Console.Clear();
                     }
+                    else if (KeyInfo.Key == ConsoleKey.Escape) { return; }
+                    else if(KeyInfo.Key == ConsoleKey.Enter){ continue; }
 
             }
         }
