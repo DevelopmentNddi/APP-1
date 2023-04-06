@@ -5,6 +5,14 @@ VisualStudioVersion = 17.6.33513.286
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APP#1", "APP#1.csproj", "{0456CDC5-A0AE-407F-ACE3-7F39DC35676C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{94400EC0-C00B-49C4-91F5-D2643A95D804}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{3692F8C5-3809-42A9-BA37-A30FAF8DF17E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NddiMathCalculator", "src\NddiMathCalculator\NddiMathCalculator.csproj", "{24D1B3AE-E957-482C-BB37-12ADE8F45E9C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NddiMathCalculator.ConsoleApp", "tests\NddiMathCalculator.ConsoleApp\NddiMathCalculator.ConsoleApp.csproj", "{4CC415D8-1F03-4942-8891-4D7EE1AB6A42}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,11 +23,23 @@ Global
 		{0456CDC5-A0AE-407F-ACE3-7F39DC35676C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0456CDC5-A0AE-407F-ACE3-7F39DC35676C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0456CDC5-A0AE-407F-ACE3-7F39DC35676C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24D1B3AE-E957-482C-BB37-12ADE8F45E9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24D1B3AE-E957-482C-BB37-12ADE8F45E9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24D1B3AE-E957-482C-BB37-12ADE8F45E9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24D1B3AE-E957-482C-BB37-12ADE8F45E9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CC415D8-1F03-4942-8891-4D7EE1AB6A42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CC415D8-1F03-4942-8891-4D7EE1AB6A42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CC415D8-1F03-4942-8891-4D7EE1AB6A42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CC415D8-1F03-4942-8891-4D7EE1AB6A42}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {14A705BE-3749-4657-9CEB-8C6E0E9C211E}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{24D1B3AE-E957-482C-BB37-12ADE8F45E9C} = {94400EC0-C00B-49C4-91F5-D2643A95D804}
+		{4CC415D8-1F03-4942-8891-4D7EE1AB6A42} = {3692F8C5-3809-42A9-BA37-A30FAF8DF17E}
 	EndGlobalSection
 EndGlobal
