@@ -44,8 +44,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IMathCalculator.cs" />
-    <Compile Include="MathCalculator.cs" />
+    <Compile Include="Interface\IMathCalculator.cs" />
+    <Compile Include="Class\MathCalculator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

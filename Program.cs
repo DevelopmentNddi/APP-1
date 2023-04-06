@@ -15,10 +15,7 @@ namespace APP_1
                 calculator.ToString();
                 Console.WriteLine("If you want clear console press <Space>\nIf you want exit press <Escape>\nIf you want to calculate again press <Enter>");
                 ConsoleKeyInfo KeyInfo = Console.ReadKey();
-                if (KeyInfo.Key == ConsoleKey.Spacebar)
-                {
-                    Console.Clear();
-                }
+                if (KeyInfo.Key == ConsoleKey.Spacebar) { Console.Clear(); }
                 else if (KeyInfo.Key == ConsoleKey.Escape) { return; }
                 else if (KeyInfo.Key == ConsoleKey.Enter) { continue; }
              }
